@@ -1,6 +1,6 @@
 import express from 'express'
-import mongoConnection from './utils/mongoConnection'
 import controllers from './controllers'
+import mongoConnection from './utils/mongoConnection'
 import errorHandling from './utils/errorHandling'
 
 const app = express(),
@@ -19,5 +19,5 @@ app.use( errorHandling )
 
 mongoConnection.init({ uri: process.env.MONGO_URI}, db => {
   // initiates the server
-  app.listen(port , () => process.stdout.write(`The app listens on port ${port}.\n`))
+  app.listen(port , () => process.stdout.write(`The app listens on port http://localhost:${port}\n`))
 })
