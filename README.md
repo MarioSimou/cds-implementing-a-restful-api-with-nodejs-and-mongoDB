@@ -1,1 +1,1 @@
-# cds-web-development-mongo-mongoose
+# @cds/web-development/mongo-mongoose
