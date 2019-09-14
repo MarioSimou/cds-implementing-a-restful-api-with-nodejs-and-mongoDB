@@ -1,4 +1,6 @@
-export default async (e, req, res, next) => {
+export default async (e, req , res , next) => {
   console.log('Error: ' , e )
-  res.status(400).json({status: 400, data : e.message })
+  const status = e.status || 500
+
+  res.status(status).json({status, data : e.message})
 }

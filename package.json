@@ -19,6 +19,7 @@
   "homepage": "https://github.com/MarioSimou/cds-web-development-mongo-mongoose#readme",
   "dependencies": {
     "env-cmd": "^10.0.1",
+    "esm": "^3.2.25",
     "express": "^4.17.1",
     "express-promise-router": "^3.0.3",
     "mongoose": "^5.7.0"

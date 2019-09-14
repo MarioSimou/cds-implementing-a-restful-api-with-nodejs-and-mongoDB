@@ -1,13 +1,15 @@
 import mongoose  from 'mongoose'
 
 let db
-
-const EVENTS = {
-  CONNECT: 'connected',
-  DISCONNECT: 'disconnected',
-  ERROR: 'error',
-}
-
+const EVENTS = (function(){
+  const e = {
+    CONNECT: 'connected',
+    DISCONNECT: 'disconnected',
+    ERROR: 'error',
+  }
+  Object.freeze( e )
+  return e    
+})()
 
 export default {
   init: ({ uri }, cb ) => {

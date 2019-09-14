@@ -2,8 +2,10 @@ import User from '../../models/User'
 
 export default async (req,res,next) => {
   try {
-    const user = await User.findByIdAndRemove(req.params.id)
-    res.status(200).json({status: 200, data: user })
+    await User.findByIdAndRemove(req.params.id)
+
+    // an HTTP status code of 204 is returned, indicating that the request was successful, however, no body is returned 
+    res.status(204).end()
   } catch( e ){
     return next( e )
   }
