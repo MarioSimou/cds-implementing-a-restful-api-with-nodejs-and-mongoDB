@@ -1,4 +1,4 @@
-# @cds/web-development/mongo-mongoose
+# Implementing a RESTful API with node.js and mongoDB
 
 ## Description
 
