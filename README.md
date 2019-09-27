@@ -2,13 +2,13 @@
 
 ## Description
 
-This repository implements a RESTful API service using [node.js](https://nodejs.org/en/), [mongoDB](https://www.mongodb.com/), [mongoose](https://mongoosejs.com/) and [express](https://expressjs.com/). More details are available in the (article)[https://www.google.com/]
+This repository implements a RESTful API service using [node.js](https://nodejs.org/en/), [mongoDB](https://www.mongodb.com/), [mongoose](https://mongoosejs.com/) and [express](https://expressjs.com/). More details are available in the [article](https://www.google.com/)
 
 ## Installation
 
 ```
-git clone https://github.com/MarioSimou/cds-web-development-mongo-mongoose/edit/master/README.md
-cd ds-web-development-mongo-mongoose
+git clone git@github.com:MarioSimou/cds-implementing-a-restful-api-with-nodejs-and-mongoDB.git
+cd cds-implementing-a-restful-api-with-nodejs-and-mongoDB
 npm install
 npm start
 ```
