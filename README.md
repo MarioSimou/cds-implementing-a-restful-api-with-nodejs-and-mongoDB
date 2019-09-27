@@ -1,5 +1,4 @@
 # @cds/web-development/mongo-mongoose
----
 
 ## Description
 
