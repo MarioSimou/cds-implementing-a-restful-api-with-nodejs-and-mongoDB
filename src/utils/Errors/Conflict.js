@@ -1,8 +1,9 @@
 import Base from './Base'
 
 function Conflict(message){
-  this._status = 409
   Base.call(this, message )
+  this._status = 409
+  this._name= 'Conflict'
 }
 
 Conflict.prototype = Base.prototype

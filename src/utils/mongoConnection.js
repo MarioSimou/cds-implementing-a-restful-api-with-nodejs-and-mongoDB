@@ -13,7 +13,7 @@ const EVENTS = (function(){
 
 export default {
   init: ({ uri }, cb ) => {
-    mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+    mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify:false })
 
     // listening events
     mongoose.connection.on(EVENTS.CONNECT, ()=> { db = mongoose.Connection; cb(db) } )

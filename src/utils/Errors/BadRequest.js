@@ -1,8 +1,9 @@
 import Base from './Base'
 
 function BadRequest(message){
-  this._status = 400
   Base.call( this , message )
+  this._status = 400
+  this._name= 'Bad Request'
 }
 
 BadRequest.prototype = Base.prototype

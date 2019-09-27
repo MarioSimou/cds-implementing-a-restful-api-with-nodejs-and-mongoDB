@@ -1,8 +1,9 @@
 import Base from './Base'
 
 function InternalServerError(message){
-  this._status = 500
   Base.call(this, message )
+  this._status = 500
+  this._name= 'Internal Server Error'
 }
 
 InternalServerError.prototype = Base.prototype
