@@ -1,8 +1,8 @@
 import express from 'express'
-import controllers from './controllers'
+import routes from './routes'
 import mongoConnection from './utils/mongoConnection'
 import errorHandling from './utils/errorHandling'
-import BadRequest from './utils/Errors/BadRequest'
+import * as middlewares from './utils/middlewares'
 
 const app = express(),
       port = process.env.PORT || 3000;
@@ -11,28 +11,10 @@ const app = express(),
 app.use(express.json())
 
 // middleware that checks if the incoming requests have set the appropriate headers
-app.use((req,res,next)=> {
-  // invalid POST Or PUT request
-  if(req.method === 'POST' || req.method == 'PUT'){
-    try {
-      const accept = req.header('Accept')
-      const contentType = req.header('Content-Type')
-      
-      if(contentType !== 'application/json')
-        throw new BadRequest('Content-Type header has to explicitly set to application/json')
-      if(!['application/json','*/*'].includes(accept))
-        throw new BadRequest('Accept header has to either set */* or application/json')
-    }catch( e ){
-      return next(e)
-    }  
-  }
+app.use(middlewares.checkHeaders)
 
-  // valid request
-  next()
-})
-
-// ROUTES - Route Prefix: /api
-app.use('/api',  controllers )
+// routing
+app.use('/api', routes)
 app.use( errorHandling )
 
 
