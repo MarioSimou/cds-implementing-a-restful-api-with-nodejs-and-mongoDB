@@ -1,4 +1,4 @@
-# Implementing a RESTful API with node.js and mongoDB
+# Implementing a RESTful API with node.js,mongoDB, mongoose and express
 
 ## Description
 
