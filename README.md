@@ -12,4 +12,4 @@ cd cds-implementing-a-restful-api-with-nodejs-and-mongoDB
 npm install
 npm start
 ```
-*Before running ```npm install```, make sure that `mongoDB` is installed and you have set the appopriate environment variables.*
+*Before running ```npm install```, make sure that and `node.js` `mongoDB` is installed and you have set the appopriate environment variables.*
