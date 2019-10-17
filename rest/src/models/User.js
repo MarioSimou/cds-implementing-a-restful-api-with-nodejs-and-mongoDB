@@ -11,7 +11,7 @@ const UserSchema = mongoose.Schema({
   password: { type: String, required: true },
   role: {type: String, required: true, default: ROLES.BASIC, enum: Object.values(ROLES) }
 }, {
-  timestamp: true
+  timestamps: true
 })
 
 export default mongoose.model('User', UserSchema)

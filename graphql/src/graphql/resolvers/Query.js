@@ -1,3 +1,4 @@
 export const Query = {
-  hello: () => 'Hello world'
+  users: () => [],
+  user: () => null
 }
