@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "rest": "env-cmd -f ./.rest.env nodemon -x babel-node ./rest/src/index.js ",
+    "graphql": "env-cmd -f ./.graphql.env nodemon -x babel-node ./graphql/src/index.js",
     "start": "npm run dev"
   },
   "repository": {
@@ -18,10 +19,13 @@
   },
   "homepage": "https://github.com/MarioSimou/cds-web-development-mongo-mongoose#readme",
   "dependencies": {
+    "apollo-server-express": "^2.9.6",
     "env-cmd": "^10.0.1",
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "express-promise-router": "^3.0.3",
+    "gql-tag": "^1.0.1",
+    "graphql": "^14.5.8",
     "mongoose": "^5.7.0"
   },
   "devDependencies": {
