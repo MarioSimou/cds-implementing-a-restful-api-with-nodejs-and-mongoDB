@@ -1,9 +1,8 @@
-import { ApolloServer, gql } from 'apollo-server-express'
+import { ApolloServer } from 'apollo-server-express'
 import express from 'express'
 import typeDefs from './graphql/schema'
 import resolvers from './graphql/resolvers'
 import mongoose from 'mongoose'
-
 const app = express(),
       port = process.env.PORT || 3000
 
@@ -12,7 +11,7 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopolo
   const server = new ApolloServer({typeDefs, resolvers})
   server.applyMiddleware({ app, path: '/api' })
   
-  app.listen({port}, () => process.stdout.write(`The server listens on port http://localhost:${port}${server.graphqlPath}`))
+  app.listen({port}, () => process.stdout.write(`The server listens on port http://localhost:${port}${server.graphqlPath}\n`))
 
 })
 
