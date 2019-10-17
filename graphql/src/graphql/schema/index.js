@@ -4,20 +4,20 @@ export default gql`
 
 type Query {
   users: UsersResponse!
-  user: UserResponse!
+  user(where: SearchUserInput!): UserResponse!
 }
 
 type Mutation {
-  createUser: UserResponse!
-  updateUser: UserResponse!
-  deleteUser: UserResponse!
+  createUser(data: CreateUserDataInput!): UserResponse!
+  updateUser(where: SearchUserInput!, data: UpdateUserDataInput!): UserResponse!
+  deleteUser(where: SearchUserInput!): UserResponse!
 }
 
 type UsersResponse implements Response {
   status: Int!
   success: Boolean!
   message: String!
-  users: [User]!
+  users: [User]
 }
 
 type UserResponse implements Response {
@@ -50,6 +50,24 @@ interface Node {
 interface Timestamp {
   createdAt: String!
   updatedAt: String!
+}
+
+input CreateUserDataInput {
+  username: String!
+  email: String!
+  password: String!
+}
+input SearchUserInput {
+  id: ID
+  username: String
+  email: String
+}
+
+input UpdateUserDataInput {
+  username: String
+  email: String
+  password: String
+  role: Role
 }
 
 enum Role {
