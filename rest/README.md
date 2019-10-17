@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository implements a RESTful API service using [node.js](https://nodejs.org/en/), [mongoDB](https://www.mongodb.com/), [mongoose](https://mongoosejs.com/) and [express](https://expressjs.com/). More details about the repo are available in this [link](https://coredatascience.herokuapp.com/category/web-development/5d8f4f9c4e9fa3001752d031).
+This repository implements a RESTful API service using [node.js](https://nodejs.org/en/), [mongoDB](https://www.mongodb.com/), [mongoose](https://mongoosejs.com/) and [express](https://expressjs.com/). More details about the repo are available in this [link](https://coredatascience.herokuapp.com/category/web-development/5d8f8c9bde756a0017b41fac).
 
 ## Installation
 
