@@ -7,8 +7,8 @@ This repository implements a RESTful API service using [node.js](https://nodejs.
 ## Installation
 
 ```
-git clone git@github.com:MarioSimou/cds-implementing-a-restful-api-with-nodejs-and-mongoDB.git
-cd cds-implementing-a-restful-api-with-nodejs-and-mongoDB
+git clone git@github.com:MarioSimou/cds-implementing-apis-with-nodejs-and-mongoDB.git
+cd rest
 npm install
 npm start
 ```
