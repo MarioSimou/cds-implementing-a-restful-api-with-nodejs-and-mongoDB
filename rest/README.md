@@ -8,8 +8,8 @@ This repository implements a RESTful API service using [node.js](https://nodejs.
 
 ```
 git clone git@github.com:MarioSimou/cds-implementing-apis-with-nodejs-and-mongoDB.git
-cd rest
+cd cds-implementing-apis-with-nodejs-and-mongoDB
 npm install
-npm start
+npm run rest
 ```
-*Before running ```npm install```, make sure that and `node.js` `mongoDB` is installed and you have set the appopriate environment variables.*
+*Before running ```npm install```, make sure that and `node.js` `mongoDB` is installed and you have set the appopriate environment variables. The environment variables will be read from `.rest.env`, which should be located in the root directory.*
