@@ -1,9 +1,10 @@
 import User from "../../models/User";
 import { ResponseUser } from "../../models/utils/Response";
 
-export default async (_, { query }) => {
+export default async (_,{query}) => {
   try {
     const user = await User.findOne({ ...query });
+    console.log('USER: ', user)
     if (!user) throw new Error("User not found");
     return new ResponseUser({
       status: 200,

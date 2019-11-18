@@ -6,6 +6,7 @@ import {
   queryUserInput,
   updateUserDataInput
 } from "./input";
+import transformVariables from '../../utils/middlewares/transformVariables'
 
 export default new GraphQLObjectType({
   name: "Mutation",
@@ -19,7 +20,7 @@ export default new GraphQLObjectType({
     },
     updateUser: {
       type: GraphQLNonNull(Response),
-      resolve: mutation.updateUser,
+      resolve: transformVariables(mutation.updateUser),
       args: {
         query: { type: GraphQLNonNull(queryUserInput) },
         data: { type: GraphQLNonNull(updateUserDataInput) }
@@ -27,7 +28,7 @@ export default new GraphQLObjectType({
     },
     deleteUser: {
       type: GraphQLNonNull(Response),
-      resolve: mutation.deleteUser,
+      resolve: transformVariables(mutation.deleteUser),
       args: {
         query: { type: GraphQLNonNull(queryUserInput) }
       }

@@ -2,6 +2,7 @@ import { GraphQLObjectType, GraphQLNonNull } from "graphql";
 import { getUser, getUsers } from "../../resolvers/Query";
 import { Response } from "./union";
 import { queryUserInput } from "./input";
+import transformVariables from '../../utils/middlewares/transformVariables'
 
 export default new GraphQLObjectType({
   name: "Query",
@@ -12,7 +13,7 @@ export default new GraphQLObjectType({
     },
     getUser: {
       type: GraphQLNonNull(Response),
-      resolve: getUser,
+      resolve: transformVariables(getUser),
       args: {
         query: { type: GraphQLNonNull(queryUserInput) }
       }

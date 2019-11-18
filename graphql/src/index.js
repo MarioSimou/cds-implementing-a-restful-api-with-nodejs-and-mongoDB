@@ -13,7 +13,7 @@ mongoose
     useUnifiedTopology: true
   })
   .then(db => {
-    const apolloServer = new ApolloServer({ schema, context: { db } });
+    const apolloServer = new ApolloServer({ schema });
     apolloServer.applyMiddleware({ app, path: "/graphql" });
 
     app.listen({ port }, () =>
