@@ -1,4 +1,4 @@
-import {GraphQLString,  GraphQLObjectType, GraphQLID, GraphQLInterfaceType} from 'graphql'
+import {GraphQLString,  GraphQLObjectType, GraphQLID} from 'graphql'
 import {Role} from './enums'
 import {Node, Timestamp} from './interfaces'
 
