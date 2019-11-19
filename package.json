@@ -27,7 +27,7 @@
     "gql-tag": "^1.0.1",
     "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
-    "mongoose": "^5.7.0"
+    "mongoose": "^5.7.5"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
