@@ -1,5 +1,6 @@
 import User from "../../../models/User";
 import { ResponseUser } from "../../../models/utils/Response";
+import { NotFound } from "../../../models/utils/Errors";
 
 export default async (_, { query, data }) => {
   try {
@@ -8,7 +9,8 @@ export default async (_, { query, data }) => {
       { ...data },
       { new: true }
     );
-    if (!user) throw new Error("User does not exist");
+    console.log(user)
+    if (!user) throw new NotFound("User does not exist");
     return new ResponseUser({
       status: 200,
       success: true,
